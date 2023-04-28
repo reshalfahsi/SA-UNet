@@ -88,7 +88,7 @@ class Up(nn.Module):
         super().__init__()
 
         self.up = nn.ConvTranspose2d(
-            in_channels, in_channels // 2, kernel_size=2, stride=2
+            in_channels, in_channels // 2, kernel_size=3, stride=2
         )
         self.conv = DoubleConv(in_channels, out_channels)
 
